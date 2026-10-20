@@ -1,0 +1,10 @@
+title: Shay Jameson
+description: A playful, colorful website built with Jekyll
+baseurl: ""
+url: "https://shayjameson.github.io"
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

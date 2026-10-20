@@ -1,0 +1,86 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Creative developer • curious builder</p>
+    <h1>Building playful things that make the internet feel alive.</h1>
+    <p class="lede">
+      I design thoughtful digital experiences, write code with personality, and turn ideas into joyful little moments.
+    </p>
+    <div class="cta-row">
+      <a class="button primary" href="#work">See my work</a>
+      <a class="button ghost" href="mailto:hello@example.com">Say hello</a>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="card card-large">
+      <span class="tag">Now shipping</span>
+      <h2>Bright ideas</h2>
+      <div class="mini-chart">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="card card-small">
+      <span class="tiny-label">Moodboard</span>
+      <div class="dot-grid">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-grid" id="about">
+  <article class="info-card accent-pink">
+    <p class="card-kicker">01</p>
+    <h3>Design-led thinking</h3>
+    <p>Clean interfaces, expressive motion, and visual systems that feel human.</p>
+  </article>
+
+  <article class="info-card accent-yellow">
+    <p class="card-kicker">02</p>
+    <h3>Code with personality</h3>
+    <p>Web experiences built to be useful, joyful, and a little bit magical.</p>
+  </article>
+
+  <article class="info-card accent-purple">
+    <p class="card-kicker">03</p>
+    <h3>Curious by default</h3>
+    <p>I love making experiments, exploring new tools, and learning in public.</p>
+  </article>
+</section>
+
+<section class="showcase" id="work">
+  <div class="section-heading">
+    <p class="eyebrow">Selected work</p>
+    <h2>Small ideas, bold energy.</h2>
+  </div>
+
+  <div class="project-list">
+    <article class="project-card">
+      <span class="project-badge">Brand</span>
+      <h3>Playful portfolio system</h3>
+      <p>Created a visual language blending high-contrast color, expressive typography, and modern layout patterns.</p>
+    </article>
+
+    <article class="project-card">
+      <span class="project-badge">Web</span>
+      <h3>Creative landing page</h3>
+      <p>Built a dynamic one-page experience tailored for storytelling, product highlights, and experimentation.</p>
+    </article>
+
+    <article class="project-card">
+      <span class="project-badge">Product</span>
+      <h3>Interactive concept work</h3>
+      <p>Explored prototypes, motion principles, and friendly microinteractions that make people smile.</p>
+    </article>
+  </div>
+</section>
