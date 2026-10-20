@@ -1,86 +1,416 @@
----
-layout: default
-title: Home
----
+:root {
+  --bg: #f9f4ff;
+  --bg-2: #eef8ff;
+  --panel: rgba(255, 255, 255, 0.76);
+  --panel-strong: #fffdfd;
+  --border: rgba(102, 86, 130, 0.1);
+  --text: #2e253d;
+  --muted: #5d5870;
+  --pink: #f9c8d8;
+  --purple: #d9c9ff;
+  --cyan: #cfeefb;
+  --yellow: #ffe7b3;
+  --green: #d8f1e3;
+  --peach: #ffd9c2;
+  --shadow: 0 22px 58px rgba(103, 89, 131, 0.12);
+}
 
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Creative developer • curious builder</p>
-    <h1>Building playful things that make the internet feel alive.</h1>
-    <p class="lede">
-      I design thoughtful digital experiences, write code with personality, and turn ideas into joyful little moments.
-    </p>
-    <div class="cta-row">
-      <a class="button primary" href="#work">See my work</a>
-      <a class="button ghost" href="mailto:hello@example.com">Say hello</a>
-    </div>
-  </div>
+* {
+  box-sizing: border-box;
+}
 
-  <div class="hero-visual" aria-hidden="true">
-    <div class="card card-large">
-      <span class="tag">Now shipping</span>
-      <h2>Bright ideas</h2>
-      <div class="mini-chart">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    <div class="card card-small">
-      <span class="tiny-label">Moodboard</span>
-      <div class="dot-grid">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-</section>
+html {
+  scroll-behavior: smooth;
+}
 
-<section class="info-grid" id="about">
-  <article class="info-card accent-pink">
-    <p class="card-kicker">01</p>
-    <h3>Design-led thinking</h3>
-    <p>Clean interfaces, expressive motion, and visual systems that feel human.</p>
-  </article>
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(217, 201, 255, 0.45), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(249, 199, 216, 0.35), transparent 24%),
+    linear-gradient(135deg, var(--bg), var(--bg-2));
+  color: var(--text);
+}
 
-  <article class="info-card accent-yellow">
-    <p class="card-kicker">02</p>
-    <h3>Code with personality</h3>
-    <p>Web experiences built to be useful, joyful, and a little bit magical.</p>
-  </article>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-  <article class="info-card accent-purple">
-    <p class="card-kicker">03</p>
-    <h3>Curious by default</h3>
-    <p>I love making experiments, exploring new tools, and learning in public.</p>
-  </article>
-</section>
+.page-shell {
+  position: relative;
+  width: min(1100px, calc(100% - 32px));
+  margin: 28px auto;
+  padding: 20px 24px 40px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
 
-<section class="showcase" id="work">
-  <div class="section-heading">
-    <p class="eyebrow">Selected work</p>
-    <h2>Small ideas, bold energy.</h2>
-  </div>
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.7;
+  pointer-events: none;
+}
 
-  <div class="project-list">
-    <article class="project-card">
-      <span class="project-badge">Brand</span>
-      <h3>Playful portfolio system</h3>
-      <p>Created a visual language blending high-contrast color, expressive typography, and modern layout patterns.</p>
-    </article>
+.orb-one {
+  width: 200px;
+  height: 200px;
+  background: rgba(217, 201, 255, 0.45);
+  top: -40px;
+  right: 10%;
+}
 
-    <article class="project-card">
-      <span class="project-badge">Web</span>
-      <h3>Creative landing page</h3>
-      <p>Built a dynamic one-page experience tailored for storytelling, product highlights, and experimentation.</p>
-    </article>
+.orb-two {
+  width: 230px;
+  height: 230px;
+  background: rgba(207, 238, 251, 0.48);
+  bottom: 12%;
+  left: -12%;
+}
 
-    <article class="project-card">
-      <span class="project-badge">Product</span>
-      <h3>Interactive concept work</h3>
-      <p>Explored prototypes, motion principles, and friendly microinteractions that make people smile.</p>
-    </article>
-  </div>
-</section>
+.orb-three {
+  width: 160px;
+  height: 160px;
+  background: rgba(249, 200, 216, 0.28);
+  bottom: 18%;
+  right: 18%;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 8px 24px;
+  border-bottom: 1px solid rgba(46, 37, 61, 0.08);
+}
+
+.brand-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  font-weight: 700;
+  color: var(--text);
+  box-shadow: 0 12px 26px rgba(157, 133, 214, 0.22);
+}
+
+.brand-name,
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-name {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.site-nav a {
+  opacity: 0.8;
+  font-size: 0.96rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px 8px 18px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #7c70a8;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.hero-copy h1,
+.section-heading h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.hero-copy h1 {
+  max-width: 640px;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+}
+
+.lede {
+  max-width: 560px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--pink), var(--purple));
+  color: var(--text);
+  box-shadow: 0 14px 28px rgba(167, 138, 216, 0.18);
+}
+
+.button.ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  min-height: 420px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.57));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card-large {
+  width: min(100%, 350px);
+  padding: 26px 24px;
+  transform: rotate(6deg);
+  margin-top: 28px;
+}
+
+.card-small {
+  width: 220px;
+  padding: 18px;
+  transform: translate(-70px, -30px) rotate(-8deg);
+}
+
+.tag,
+.project-badge,
+.tiny-label {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag {
+  background: rgba(216, 241, 227, 0.8);
+  color: #3f6f5b;
+}
+
+.card-large h2 {
+  margin: 18px 0 18px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.mini-chart {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+  min-height: 120px;
+}
+
+.mini-chart span {
+  display: block;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(180deg, var(--cyan), var(--purple));
+}
+
+.mini-chart span:nth-child(1) { height: 28%; }
+.mini-chart span:nth-child(2) { height: 42%; }
+.mini-chart span:nth-child(3) { height: 70%; }
+.mini-chart span:nth-child(4) { height: 62%; }
+.mini-chart span:nth-child(5) { height: 88%; }
+
+.tiny-label {
+  background: rgba(255, 231, 179, 0.7);
+  color: #7b5a1d;
+}
+
+.dot-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dot-grid span {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(249, 200, 216, 0.95), rgba(207, 238, 251, 0.85));
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px 8px 8px;
+}
+
+.info-card {
+  padding: 22px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.accent-pink { box-shadow: inset 0 0 0 1px rgba(249, 200, 216, 0.35); }
+.accent-yellow { box-shadow: inset 0 0 0 1px rgba(255, 231, 179, 0.45); }
+.accent-purple { box-shadow: inset 0 0 0 1px rgba(217, 201, 255, 0.5); }
+
+.card-kicker {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.info-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.info-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.showcase {
+  padding: 42px 8px 0;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  padding: 22px 20px;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.3);
+}
+
+.project-badge {
+  background: rgba(217, 201, 255, 0.46);
+  color: #4f3f76;
+}
+
+.project-card h3 {
+  margin: 18px 0 10px;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.site-footer {
+  padding: 36px 8px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .info-grid,
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-visual {
+    display: block;
+  }
+
+  .card-small {
+    margin-top: 14px;
+    transform: none;
+  }
+}
