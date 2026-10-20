@@ -3,84 +3,77 @@ layout: default
 title: Home
 ---
 
-<section class="hero">
+<section class="hero-shell">
   <div class="hero-copy">
     <p class="eyebrow">creative developer • curious builder</p>
-    <h1>Building soft, playful things for the web.</h1>
+    <h1>A sleek, modern Jekyll theme for personal websites</h1>
     <p class="lede">
-      I design thoughtful digital experiences, write code with personality, and turn big ideas into joyful little moments.
+      Personal is the perfect theme for developers, designers and other creatives.
     </p>
-    <div class="cta-row">
-      <a class="button primary" href="#work">See my work</a>
-      <a class="button ghost" href="mailto:hello@example.com">Say hello</a>
+
+    <div class="social-row" aria-label="Social links">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">x</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="Dribbble">◌</a>
     </div>
   </div>
 
-  <div class="hero-visual" aria-hidden="true">
-    <div class="card card-large">
-      <span class="tag">Now shipping</span>
-      <h2>Soft ideas</h2>
-      <div class="mini-chart">
-        <span></span>
-        <span></span>
+  <div class="hero-visual" aria-label="Profile portrait">
+    <div class="portrait-frame"></div>
+  </div>
+</section>
+
+<section class="feature-row">
+  <div class="mockup-card soft-peach">
+    <div class="mini-mockup">
+      <div class="mini-topbar">
         <span></span>
         <span></span>
         <span></span>
       </div>
-    </div>
-    <div class="card card-small">
-      <span class="tiny-label">Moodboard</span>
-      <div class="dot-grid">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
+      <div class="mini-paper">
+        <span class="mini-badge">Write it down</span>
       </div>
     </div>
   </div>
+
+  <div class="feature-copy">
+    <h2>Write it down</h2>
+    <p class="feature-kicker">Branding design</p>
+    <p>
+      Personal lets you show off your projects right here on the home page, with an engaging hover effect to grab the attention of your visitors.
+    </p>
+  </div>
 </section>
 
-<section class="info-grid" id="about">
-  <article class="info-card accent-pink">
-    <p class="card-kicker">01</p>
-    <h3>Design-led thinking</h3>
-    <p>Clean, welcoming interfaces with a little personality and a lot of intention.</p>
-  </article>
-
-  <article class="info-card accent-yellow">
-    <p class="card-kicker">02</p>
-    <h3>Code with charm</h3>
-    <p>Thoughtful builds that feel polished, approachable, and genuinely human.</p>
-  </article>
-
-  <article class="info-card accent-purple">
-    <p class="card-kicker">03</p>
-    <h3>Curious by default</h3>
-    <p>I love learning, experimenting, and making things that feel good to use.</p>
-  </article>
-</section>
-
-<section class="showcase" id="work">
-  <div class="section-heading">
-    <p class="eyebrow">Selected work</p>
-    <h2>Small ideas, bright energy.</h2>
+<section class="info-panel" id="about">
+  <div class="info-copy">
+    <h3>About me</h3>
+    <p>
+      I build thoughtful digital experiences, refine visual systems, and turn ideas into polished, human-centered work.
+    </p>
   </div>
 
-  <div class="project-list">
-    <article class="project-card">
-      <span class="project-badge">Brand</span>
-      <h3>Playful portfolio system</h3>
-      <p>Created a visual language grounded in soft color, expressive typography, and friendly structure.</p>
-    </article>
+  <div class="info-visual pastel-panel">
+    <div class="mock-layout">
+      <div class="stack-card"></div>
+      <div class="stack-card small"></div>
+      <div class="stack-card tall"></div>
+    </div>
+  </div>
+</section>
 
-    <article class="project-card">
-      <span class="project-badge">Web</span>
-      <h3>Creative landing page</h3>
-      <p>Built a curated digital experience designed to share ideas with warmth and clarity.</p>
-    </article>
+<section class="resume-panel" id="resume">
+  <div class="resume-copy">
+    <h3>Resume</h3>
+    <p>
+      Use this section for your professional summary, experience, technical skills, and education. It is a simple, clean space to present your background.
+    </p>
+  </div>
 
-    <article class="project-card">
-      <span class="project-badge">Product</span>
-      <h3>Interactive concept work</h3>
-      <p>Explored prototypes, motion ideas, and subtle details that make interfaces feel delightful.</p>
-    </article>
+  <div class="resume-visual">
+    <div class="resume-box"></div>
   </div>
 </section>

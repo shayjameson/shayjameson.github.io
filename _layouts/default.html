@@ -3,18 +3,16 @@
   {% include head.html %}
   <body>
     <div class="page-shell">
-      <div class="orb orb-one"></div>
-      <div class="orb orb-two"></div>
-      <div class="orb orb-three"></div>
-
       <header class="site-header">
         <div class="brand-wrap">
-          <span class="brand-mark">S</span>
-          <a href="{{ '/' | relative_url }}" class="brand-name">{{ site.title }}</a>
+          <span class="brand-mark">P</span>
+          <a href="{{ '/' | relative_url }}" class="brand-name">Personal</a>
         </div>
+
         <nav class="site-nav" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#blog">Blog</a>
           <a href="#about">About</a>
-          <a href="#work">Work</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -22,10 +20,6 @@
       <main class="site-main">
         {{ content }}
       </main>
-
-      <footer class="site-footer" id="contact">
-        <p>Made with 💜 and Jekyll</p>
-      </footer>
     </div>
   </body>
 </html>
